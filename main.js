@@ -42,10 +42,10 @@
 let string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolore, suck , corporis quibusdam, fuck , velit quia et illo. Ut, sed debitis tempora dicta rem dolorem, corrupti officiis blanditiis unde perspiciatis et a!`;
 
 function nameFilter(words) {
-  let string = words.toLowerCase().split(" ");
+  let string = words.split(" ");
 
   let result = string.filter(function (item) {
-    if (item !== "fuck" && item !== "suck") {
+    if (item.toLowerCase() !== "fuck" && item.toLowerCase() !== "suck") {
       return item;
     }
   });
